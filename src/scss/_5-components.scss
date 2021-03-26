@@ -1,0 +1,145 @@
+.slider {
+  $sliderHeight: auto;
+
+  height: $sliderHeight;
+  overflow: hidden;
+  position: relative;
+
+  &__frame {
+    min-width: 100%;
+    min-height: $sliderHeight;
+    transition: transform 0.5s ease-in-out;
+
+    display: flex;
+
+    @include apply-up(large) {
+      padding-bottom: 5em; // Needed to show controls out of overflow hidden
+    }
+  }
+
+  &__item {
+    min-width: 100%;
+    min-height: $sliderHeight;
+  }
+
+  &__control-group {
+    font-size: 0;
+    position: absolute;
+    top: 53%;
+    z-index: map-get($zIndex, control-group);
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include apply-up(large) {
+      top: 82%;
+      left: 65%;
+    }
+  }
+
+  &__control {
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &:hover {
+      background-color: rgb(233, 233, 233);
+    }
+  }
+
+  &__control-prev {
+    border-radius: 70px 0 0 70px;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  &__control-next {
+    border-radius: 0 70px 70px 0;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+.feedback-card {
+  margin-top: 3em;
+
+  @include apply-up(large) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+    margin-top: 8em;
+  }
+
+  &__img {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+
+    @include apply-up(large) {
+      width: 380px;
+      height: 380px;
+    }
+
+    img {
+      border-radius: 6px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    margin-top: 5em;
+
+    @include apply-up(large) {
+      margin-top: 7em;
+      position: relative;
+      z-index: map-get($zIndex, feedback-card-content);
+      left: 30%;
+    }
+  }
+
+  &__feed {
+    font-weight: $fontLight;
+    color: $darkBlue;
+    text-align: center;
+    max-width: 40ch;
+    margin: 0 auto;
+
+    @include apply-up(large) {
+      font-size: 1.3rem;
+      text-align: left;
+    }
+  }
+
+  &__user-info {
+    text-align: center;
+    margin-top: 1em;
+
+    @include apply-up(large) {
+      text-align: left;
+      display: flex;
+      direction: ltr;
+      align-items: center;
+    }
+
+    h2 {
+      font-size: 0.95rem;
+      color: $darkBlue;
+    }
+
+    h3 {
+      font-size: 0.95rem;
+      color: $grayishBlue;
+      font-weight: $fontRegular;
+      margin-top: 0.2em;
+
+      @include apply-up(large) {
+        margin-top: 0;
+        margin-left: 0.5em;
+      }
+    }
+  }
+}

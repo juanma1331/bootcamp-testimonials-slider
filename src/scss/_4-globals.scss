@@ -1,0 +1,8 @@
+.container {
+  $spacer: 2em;
+
+  max-width: map-get($breakpoints-down, medium);
+  margin: 0 auto;
+  padding-left: $spacer;
+  padding-right: $spacer;
+}

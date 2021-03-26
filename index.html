@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" lang="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/assets/icons/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+
+    <link rel="stylesheet" href="./src/scss/main.scss" />
+  </head>
+  <body>
+    <img src="./src/assets/images/pattern-bg.svg" alt="" class="pattern-bg" />
+    <img
+      src="./src/assets/images/pattern-quotes.svg"
+      alt=""
+      class="pattern-quotes"
+    />
+    <img
+      src="./src/assets/images/pattern-curve.svg"
+      alt=""
+      class="pattern-curve"
+    />
+
+    <section class="container">
+      <div class="slider">
+        <div class="slider__control-group">
+          <button
+            id="slider-prev-btn"
+            class="slider__control slider__control-prev"
+          >
+            <img src="./src/assets/icons/icon-prev.svg" alt="" />
+          </button>
+          <button
+            id="slider-next-btn"
+            class="slider__control slider__control-next"
+          >
+            <img src="./src/assets/icons/icon-next.svg" alt="" />
+          </button>
+        </div>
+
+        <div id="slider-frame" class="slider__frame">
+          <div class="slider__item">
+            <div class="my-content-1">
+              <div class="feedback-card">
+                <div class="feedback-card__img">
+                  <img src="./src/assets/images/image-tanya.jpg" alt="" />
+                </div>
+                <div class="feedback-card__content">
+                  <p class="feedback-card__feed">
+                    I’ve been interested in coding for a while but never taken
+                    the jump, until now. I couldn’t recommend this course
+                    enough. I’m now in the job of my dreams and so excited about
+                    the future.
+                  </p>
+
+                  <div class="feedback-card__user-info">
+                    <h2>Tanya Sinclair</h2>
+                    <h3>UX Engineer</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider__item">
+            <div class="my-content-2">
+              <div class="feedback-card">
+                <div class="feedback-card__img">
+                  <img src="./src/assets/images/image-john.jpg" alt="" />
+                </div>
+                <div class="feedback-card__content">
+                  <p class="feedback-card__feed">
+                    If you want to lay the best foundation possible I’d
+                    recommend taking this course. The depth the instructors go
+                    into is incredible. I now feel so confident about starting
+                    up as a professional developer.
+                  </p>
+
+                  <div class="feedback-card__user-info">
+                    <h2>John Tarkpor</h2>
+                    <h3>Junior Front-end Developer</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>
