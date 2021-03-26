@@ -31,7 +31,7 @@
     transform: translateX(-50%);
 
     @include apply-up(large) {
-      top: 82%;
+      top: 85%;
       left: 65%;
     }
   }
@@ -79,8 +79,8 @@
     margin: 0 auto;
 
     @include apply-up(large) {
-      width: 380px;
-      height: 380px;
+      width: 480px;
+      height: 480px;
     }
 
     img {
@@ -94,10 +94,10 @@
     margin-top: 5em;
 
     @include apply-up(large) {
-      margin-top: 7em;
+      margin-top: 10em;
       position: relative;
       z-index: map-get($zIndex, feedback-card-content);
-      left: 30%;
+      left: 20%;
     }
   }
 
