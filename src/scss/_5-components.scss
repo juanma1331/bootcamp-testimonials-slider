@@ -1,13 +1,17 @@
 .slider {
   $sliderHeight: auto;
+  padding-top: 2em;
 
   height: $sliderHeight;
   overflow: hidden;
   position: relative;
 
+  @include apply-up(large) {
+    padding-top: 5em;
+  }
+
   &__frame {
-    min-width: 100%;
-    min-height: $sliderHeight;
+    min-height: 100%;
     transition: transform 0.5s ease-in-out;
 
     display: flex;
@@ -19,19 +23,19 @@
 
   &__item {
     min-width: 100%;
-    min-height: $sliderHeight;
+    min-height: 100%;
   }
 
   &__control-group {
-    font-size: 0;
     position: absolute;
-    top: 53%;
-    z-index: map-get($zIndex, control-group);
     left: 50%;
+    top: 54%;
     transform: translateX(-50%);
+    z-index: map-get($zIndex, control-group);
+    font-size: 0;
 
     @include apply-up(large) {
-      top: 85%;
+      top: 83%;
       left: 65%;
     }
   }
@@ -64,13 +68,10 @@
 }
 
 .feedback-card {
-  margin-top: 3em;
-
   @include apply-up(large) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     direction: rtl;
-    margin-top: 8em;
   }
 
   &__img {
@@ -91,7 +92,7 @@
   }
 
   &__content {
-    margin-top: 5em;
+    margin-top: 3em;
 
     @include apply-up(large) {
       margin-top: 10em;
@@ -132,7 +133,7 @@
 
     h3 {
       font-size: 0.95rem;
-      color: $grayishBlue;
+      color: rgb(109, 108, 108);
       font-weight: $fontRegular;
       margin-top: 0.2em;
 
